@@ -8,7 +8,6 @@ function Home() {
         <p>Computer Science student passionate about AI and creativity.</p>
       </div>
 
-/>
 <div className="profile-container">
   <img src={profile} alt="profile" className="profile-img" />
 </div>
