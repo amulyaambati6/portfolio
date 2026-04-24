@@ -18,7 +18,7 @@ function Projects() {
         <p>
           Analyzes password strength using entropy and pattern detection.
         </p>
-        <a href="https://github.com/hrutikagorantla/Password-Strength-Checker">GitHub Link</a>
+        <a href="https://github.com/hrutikagorantla/Password-Strength-Checker ">GitHub Link</a>
       </div>
     </div>
   );
