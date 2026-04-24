@@ -9,7 +9,7 @@ function Projects() {
           A platform where students can book tutoring sessions with real-time
           chat support.
         </p>
-        <a href="https://github.com/okayayushhh/Peer2Peer-Platform">GitHub Link</a>
+        <a href="https://github.com/amulyaambati6/Peer2Peer-Platform">GitHub Link</a>
         
       </div>
 
@@ -18,7 +18,7 @@ function Projects() {
         <p>
           Analyzes password strength using entropy and pattern detection.
         </p>
-        <a href="https://github.com/hrutikagorantla/Password-Strength-Checker ">GitHub Link</a>
+        <a href="https://github.com/amulyaambati6/Password-Strength-Checker">GitHub Link</a>
       </div>
     </div>
   );
