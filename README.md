@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Amulya Ambati · Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio of **Amulya Ambati**, Computer Science Engineering student at Mahindra University (India), on the Digital Tech Year 2026–2027 at Centrale Méditerranée (Nice, France).
 
-## Available Scripts
+**Computer Science | Data Analytics | Artificial Intelligence | Digital Technology** · open to technical internships from March 2027.
 
-In the project directory, you can run:
+Live site: <https://amulyaambati6.github.io/portfolio/>
 
-### `npm start`
+## What's on the site
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A single responsive page with:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Hero** with positioning and internship availability
+- **About me** with interests and languages
+- **Education** (Centrale Méditerranée, Mahindra University)
+- **Technical skills**, grouped by category
+- **Featured projects** with screenshots, technologies and links:
+  - COVID-19 Global Economic Impact Dashboard (Python, Pandas, Plotly, Streamlit, SciPy, MySQL)
+  - Peer-to-Peer Tutoring Platform (HTML, CSS, JavaScript)
+  - Password Strength Checker (HTML, CSS, JavaScript)
+- **Experience & leadership**
+- **Resume** download
+- **Contact** (email, LinkedIn, GitHub)
 
-### `npm test`
+## Tech stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 18 with Create React App (`react-scripts` 5)
+- Plain CSS with design tokens (no UI framework)
+- `react-icons` for icons
+- Google Fonts: Cormorant Garamond (headings) and Inter (text)
+- Jest + React Testing Library
+- Deployed to GitHub Pages with `gh-pages`
 
-### `npm run build`
+## Project structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+public/
+  index.html            page title, description and social metadata
+  favicon.svg, *.png    icons
+  Amulya_Ambati_CV.pdf  (add this yourself; see "Updating content")
+src/
+  data/profile.js       ALL text content: profile, education, skills, projects, experience
+  components/           one component per section (Hero, About, Education, ...)
+  hooks/useReveal.js    gentle fade-in when a section scrolls into view
+  styles/App.css        design tokens, layout and responsive rules
+  assets/               profile photo and project screenshots
+  App.js                page layout
+  App.test.js           tests
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Updating content
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Almost everything lives in **`src/data/profile.js`**:
 
-### `npm run eject`
+- **LinkedIn:** set `profile.linkedin` to your profile URL. The LinkedIn links appear automatically once it is set.
+- **CV:** save your PDF as `public/Amulya_Ambati_CV.pdf` (or change `profile.resumeFile`). The site checks that the file exists: until it does, the Resume section shows a "Request my CV by email" button instead of a broken link.
+- **Projects:** edit the `projects` array. Screenshots go in `src/assets/projects/` (1120 × 700 JPEG works well).
+- **Experience:** add entries to the `experience` array using the same fields.
+- **Skills:** edit the `skills` groups.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Colours and fonts are CSS variables at the top of `src/styles/App.css`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Run locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Requires Node.js 18 or newer.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+npm start          # development server at http://localhost:3000
+npm test           # run the tests
+npm run build      # production build in ./build
+```
 
-## Learn More
+## Deploy to GitHub Pages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The site is published from the `gh-pages` branch.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run deploy
+```
 
-### Code Splitting
+This builds the site and pushes the `build` folder to the `gh-pages` branch. In the repository settings, **Pages → Source** should be "Deploy from a branch", branch `gh-pages`, folder `/ (root)`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Privacy
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The site shows only a personal email address and public profile links. No phone number or university email is published.
