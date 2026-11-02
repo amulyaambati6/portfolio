@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.4c259d24.css",
-    "main.js": "./static/js/main.03d2fc70.js",
+    "main.css": "./static/css/main.899a3f1d.css",
+    "main.js": "./static/js/main.b69a098b.js",
+    "static/media/covid-dashboard.jpg": "./static/media/covid-dashboard.b0f710e37e060f7683d8.jpg",
+    "static/media/peer-tutoring.jpg": "./static/media/peer-tutoring.aa8aab7fb131e1b2aad5.jpg",
+    "static/media/password-checker.jpg": "./static/media/password-checker.2941c1351e5d5ba8f868.jpg",
     "static/media/profile1.jpg": "./static/media/profile1.c53a3820da014b39d0fa.jpg",
     "index.html": "./index.html",
-    "main.4c259d24.css.map": "./static/css/main.4c259d24.css.map",
-    "main.03d2fc70.js.map": "./static/js/main.03d2fc70.js.map"
+    "main.899a3f1d.css.map": "./static/css/main.899a3f1d.css.map",
+    "main.b69a098b.js.map": "./static/js/main.b69a098b.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c259d24.css",
-    "static/js/main.03d2fc70.js"
+    "static/css/main.899a3f1d.css",
+    "static/js/main.b69a098b.js"
   ]
 }
