@@ -3,7 +3,7 @@ import { skills } from "../data/profile";
 
 function Skills() {
   return (
-    <Section id="skills" eyebrow="Technical skills" title="What I work with">
+    <Section id="skills" number="04" eyebrow="Technical skills" title="What I work with">
       <div className="skills">
         {skills.map(({ group, items }) => (
           <div key={group} className="skills__group card">

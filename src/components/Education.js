@@ -3,7 +3,7 @@ import { education } from "../data/profile";
 
 function Education() {
   return (
-    <Section id="education" eyebrow="Education" title="Where I'm studying" tone="tint">
+    <Section id="education" number="03" eyebrow="Education" title="Where I'm studying" tone="tint">
       <ol className="timeline">
         {education.map((e) => (
           <li key={e.institution} className="timeline__item card">

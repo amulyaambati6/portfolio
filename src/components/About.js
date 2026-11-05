@@ -1,10 +1,16 @@
 import Section from "./Section";
-import { about } from "../data/profile";
+import photo from "../assets/profile1.jpg";
+import { about, profile } from "../data/profile";
 
 function About() {
   return (
-    <Section id="about" eyebrow="About me" title="Data, design and decisions">
+    <Section id="about" number="02" eyebrow="About me" title="Data, design and decisions">
       <div className="about">
+        <div className="about__photo">
+          <div className="about__frame">
+            <img src={photo} alt={`Portrait of ${profile.name}`} width="689" height="886" loading="lazy" />
+          </div>
+        </div>
         <div className="about__text">
           {about.paragraphs.map((p) => (
             <p key={p}>{p}</p>
@@ -14,7 +20,9 @@ function About() {
           <h3 className="mini-title">Interests</h3>
           <ul className="chips">
             {about.interests.map((i) => (
-              <li key={i} className="chip">{i}</li>
+              <li key={i} className="chip">
+                {i}
+              </li>
             ))}
           </ul>
           <h3 className="mini-title">Languages</h3>

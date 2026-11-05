@@ -1,30 +1,26 @@
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Experience from "./components/Experience";
-import Resume from "./components/Resume";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ScrollProgress from "./components/ScrollProgress";
+import Home from "./pages/Home";
+import CaseStudy from "./pages/CaseStudy";
+import useHashRoute from "./hooks/useHashRoute";
 
 function App() {
+  const route = useHashRoute();
+  const onHome = route.page === "home";
+
   return (
     <>
-      <a className="skip-link" href="#main">
+      <a className="skip-link" href="#main" onClick={(e) => {
+        e.preventDefault();
+        document.getElementById("main")?.focus();
+      }}>
         Skip to content
       </a>
-      <Navbar />
-      <main id="main">
-        <Hero />
-        <About />
-        <Education />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Resume />
-        <Contact />
+      <ScrollProgress />
+      <Navbar onHome={onHome} />
+      <main id="main" tabIndex={-1}>
+        {onHome ? <Home anchor={route.anchor} /> : <CaseStudy key={route.slug} slug={route.slug} />}
       </main>
       <Footer />
     </>

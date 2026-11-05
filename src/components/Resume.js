@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { FiDownload, FiMail } from "react-icons/fi";
-import Section from "./Section";
 import { profile } from "../data/profile";
 
 const resumeUrl = `${process.env.PUBLIC_URL}/${profile.resumeFile}`;
@@ -25,23 +24,21 @@ function Resume() {
   }, []);
 
   return (
-    <Section id="resume" eyebrow="Resume" title="The one-page version" tone="tint">
-      <div className="resume card">
-        <p>
-          A concise summary of my education, projects and skills, ready to share with your
-          team.
-        </p>
-        {available ? (
-          <a className="btn btn--primary" href={resumeUrl} download>
-            <FiDownload aria-hidden="true" /> Download CV (PDF)
-          </a>
-        ) : (
-          <a className="btn btn--primary" href={`mailto:${profile.email}?subject=CV%20request`}>
-            <FiMail aria-hidden="true" /> Request my CV by email
-          </a>
-        )}
+    <div id="resume" className="resume">
+      <div>
+        <h3 className="resume__title">The one-page version</h3>
+        <p>Education, projects and skills on a single page, ready to share with your team.</p>
       </div>
-    </Section>
+      {available ? (
+        <a className="btn btn--light" href={resumeUrl} download>
+          <FiDownload aria-hidden="true" /> Download CV (PDF)
+        </a>
+      ) : (
+        <a className="btn btn--light" href={`mailto:${profile.email}?subject=CV%20request`}>
+          <FiMail aria-hidden="true" /> Request my CV by email
+        </a>
+      )}
+    </div>
   );
 }
 

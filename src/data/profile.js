@@ -1,13 +1,24 @@
 // All portfolio content lives here, so the site can be updated without touching components.
 // Only add facts that are true and verifiable. Leave a field empty ("" or []) to hide it.
 
-import covidShot from "../assets/projects/covid-dashboard.jpg";
-import peerShot from "../assets/projects/peer-tutoring.jpg";
-import passwordShot from "../assets/projects/password-checker.jpg";
+import covidGrowth from "../assets/projects/covid-dashboard.jpg";
+import covidHome from "../assets/projects/covid-home.jpg";
+import covidCompare from "../assets/projects/covid-compare.jpg";
+import covidFindings from "../assets/projects/covid-findings.jpg";
+import covidPolicy from "../assets/projects/covid-policy.jpg";
+import peerDashboard from "../assets/projects/peer-tutoring.jpg";
+import peerLogin from "../assets/projects/peer-login.jpg";
+import peerMentors from "../assets/projects/peer-mentors.jpg";
+import peerBooking from "../assets/projects/peer-booking.jpg";
+import peerDoubts from "../assets/projects/peer-doubts.jpg";
+import passwordMedium from "../assets/projects/password-checker.jpg";
+import passwordWeak from "../assets/projects/password-weak.jpg";
+import passwordStrong from "../assets/projects/password-strong.jpg";
 
 export const profile = {
   name: "Amulya Ambati",
-  shortName: "Amulya",
+  firstName: "Amulya",
+  lastName: "Ambati",
   positioning: [
     "Computer Science",
     "Data Analytics",
@@ -15,18 +26,27 @@ export const profile = {
     "Digital Technology",
   ],
   location: "Nice, France",
-  availability: "Open to technical internships from March 2027",
+  availability: "Available for a 6-month internship · March–August 2027",
+  headline: "I turn messy data into clear, interactive tools people can explore.",
   intro:
-    "Computer Science Engineering student at Mahindra University, currently on the Digital Tech Year at Centrale Méditerranée in Nice. I like turning data into clear, interactive tools that help people make decisions.",
+    "Computer Science Engineering student at Mahindra University, on the Digital Tech Year at Centrale Méditerranée in Nice. Looking for an internship in France in data analytics, applied AI or digital technology.",
 
   email: "amulyaambati6@gmail.com",
   github: "https://github.com/amulyaambati6",
   // TODO: add your LinkedIn profile URL, e.g. "https://www.linkedin.com/in/your-handle/"
   linkedin: "",
   // Put your CV in /public with this file name. Until it exists, the site
-  // shows "CV available on request" instead of a broken download.
+  // shows "Request my CV by email" instead of a broken download.
   resumeFile: "Amulya_Ambati_CV.pdf",
 };
+
+// Short, true figures shown under the hero.
+export const stats = [
+  { value: "7", label: "countries compared in my COVID-19 economics dashboard" },
+  { value: "9", label: "interactive pages in that dashboard, live on Streamlit" },
+  { value: "6", label: "months of availability, March to August 2027" },
+  { value: "4", label: "languages: English, Hindi, Telugu and French" },
+];
 
 export const about = {
   paragraphs: [
@@ -46,7 +66,7 @@ export const about = {
     { name: "English", level: "Fluent" },
     { name: "Hindi", level: "Native" },
     { name: "Telugu", level: "Native" },
-    { name: "French", level: "Beginner (A1)" },
+    { name: "French", level: "Elementary (A2)" },
   ],
 };
 
@@ -54,11 +74,12 @@ export const education = [
   {
     institution: "Centrale Méditerranée",
     place: "Nice, France",
-    programme: "Digital Tech Year",
+    programme: "Digital Tech Year (Bac+4 level)",
     period: "2026 – 2027",
     details: [
       "Project-based year focused on digital technology, data and teamwork.",
-      "Team project: COVID-19 Global Economic Impact Dashboard (see Projects).",
+      "Internship agreement (convention de stage) provided by the school.",
+      "Team project: COVID-19 Global Economic Impact Dashboard.",
     ],
   },
   {
@@ -71,84 +92,169 @@ export const education = [
 ];
 
 export const skills = [
-  {
-    group: "Programming",
-    items: ["Python", "Java", "C / C++", "JavaScript", "SQL"],
-  },
-  {
-    group: "Data & Analytics",
-    items: ["Pandas", "Plotly", "Streamlit", "SciPy", "MySQL"],
-  },
-  {
-    group: "Web Development",
-    items: ["HTML", "CSS", "JavaScript", "React"],
-  },
-  {
-    group: "Tools",
-    items: ["Git", "GitHub", "VS Code"],
-  },
-  {
-    group: "Digital & Design",
-    items: ["Canva", "Meta Ads Manager", "Content creation"],
-  },
+  { group: "Programming", items: ["Python", "Java", "C / C++", "JavaScript", "SQL"] },
+  { group: "Data & Analytics", items: ["Pandas", "Plotly", "Streamlit", "SciPy", "MySQL"] },
+  { group: "Web Development", items: ["HTML", "CSS", "JavaScript", "React"] },
+  { group: "Tools", items: ["Git", "GitHub", "VS Code"] },
+  { group: "Digital & Design", items: ["Canva", "Meta Ads Manager", "Content creation"] },
 ];
 
 export const projects = [
   {
+    slug: "covid-dashboard",
     title: "COVID-19 Global Economic Impact Dashboard",
-    tagline: "Multi-page interactive dashboard · Team of 4 · Centrale Méditerranée",
-    image: covidShot,
+    short: "COVID-19 Economic Impact",
+    tagline: "Data storytelling · Team of 4 · Centrale Méditerranée",
+    image: covidGrowth,
     imageAlt:
       "Economic Growth page of the COVID-19 dashboard, with GDP growth KPI cards and a line chart per country",
-    description:
-      "How did COVID-19 affect the global economy? The dashboard compares seven countries (United States, India, France, China, Brazil, Germany, Rwanda) using World Bank GDP growth, unemployment and inflation alongside COVID-19 cases, deaths and government-response stringency.",
-    highlights: [
-      "Pages for economic growth, labour market, inflation, pandemic & policy response, country comparisons and key findings",
-      "Shared country and year filters, consistent country colours across every chart",
-      "Exploratory correlations with multiple-testing correction, and stated limitations",
-      "Bonus MySQL schema and load scripts; automated tests for data and app pages",
-    ],
-    role: "My role: visualisation, design, testing and integration.",
+    summary:
+      "A multi-page interactive dashboard on how COVID-19 affected the economies of seven countries, combining World Bank indicators with pandemic and policy data.",
     tech: ["Python", "Pandas", "Plotly", "Streamlit", "SciPy", "MySQL"],
     repo: "https://github.com/amulyaambati6/covid-economic-impact-dashboard",
     live: "https://covid-economic-impact-dashboard.streamlit.app",
+    caseStudy: {
+      meta: [
+        { label: "Role", value: "Visualisation, design, testing & integration" },
+        { label: "Team", value: "4 students" },
+        { label: "When", value: "October 2026" },
+        { label: "Context", value: "Data storytelling project, Centrale Méditerranée" },
+      ],
+      question: "How did COVID-19 impact the global economy?",
+      overview: [
+        "The dashboard compares seven countries (the United States, India, France, China, Brazil, Germany and Rwanda) using World Bank GDP growth, unemployment and inflation for 2018–2024, alongside COVID-19 cases, deaths and government-response stringency for 2020–2022.",
+        "The brief suggested Plotly Dash; the team got approval to build it with Streamlit instead, with every chart an interactive Plotly figure. It is deployed on Streamlit Community Cloud.",
+      ],
+      contribution: [
+        "Visual design and chart styling across the app.",
+        "Integrating the team's data preparation, analysis and page work into one app.",
+        "Testing: the project's automated checks cover app pages, filters, analysis, processed data and findings.",
+        "The bonus MySQL database: schema, load scripts, example queries and an ER diagram.",
+      ],
+      process: [
+        { step: "Collect", text: "World Bank indicators, COVID-19 cases and deaths, government stringency index." },
+        { step: "Clean & merge", text: "Coverage checks and yearly / monthly merged datasets for the seven countries." },
+        { step: "Analyse", text: "Exploratory analysis, trends, correlations with a multiple-testing correction." },
+        { step: "Visualise", text: "Nine pages with shared filters and fixed country colours on every chart." },
+        { step: "Test & ship", text: "Automated tests, MySQL bonus layer, deployment to Streamlit Cloud." },
+      ],
+      features: [
+        "Pages for economic growth, labour market, inflation, pandemic & policy response, country comparisons and key findings",
+        "Country and year filters that persist across pages",
+        "Each country keeps the same colour and marker on every chart",
+        "Interpretation notes and data limitations on every page",
+      ],
+      findings: [
+        { figure: "−3.3%", text: "Median GDP growth in 2020, down from 2.6% in 2019, before rebounding to 6.9% in 2021." },
+        { figure: "6 of 7", text: "economies contracted in 2020; China kept growing." },
+        { figure: "+4.4 pts", text: "the largest rise in unemployment from 2019 to 2020, in the United States." },
+        { figure: "6.9%", text: "median inflation in 2022: prices rose fastest after the shock, not during it." },
+      ],
+      findingsNote:
+        "Descriptive results for these seven countries only, not causal estimates. Figures from the project's findings summary.",
+      gallery: [
+        { src: covidHome, alt: "Dashboard home page with the research question and navigation cards" },
+        { src: covidFindings, alt: "Key Findings page summarising results by theme" },
+        { src: covidCompare, alt: "Country Comparisons page ranking GDP growth in 2020" },
+        { src: covidPolicy, alt: "Pandemic & Policy Response page with deaths and stringency figures" },
+      ],
+    },
   },
   {
+    slug: "peer-tutoring",
     title: "Peer-to-Peer Tutoring Platform",
-    tagline: "Team project · Frontend",
-    image: peerShot,
+    short: "Peer Tutoring Platform",
+    tagline: "Web platform prototype · Team project · Frontend",
+    image: peerDashboard,
     imageAlt:
       "Dashboard of the tutoring platform showing upcoming sessions, mentor picks and a points card",
-    description:
-      "A web platform concept that connects students with peer mentors. The frontend is a multi-page prototype covering the main student journeys.",
-    highlights: [
-      "Pages for login with role selection, dashboard, mentor search, session booking, all sessions and a doubt board",
-      "Dark mode with a saved preference, toast notifications and a messaging widget UI",
-      "A teammate added an Express and MongoDB endpoint for booking sessions",
-    ],
-    role: "My role: frontend development.",
+    summary:
+      "A web platform concept that connects students with peer mentors for tutoring sessions and doubt solving. I worked on the multi-page frontend prototype.",
     tech: ["HTML", "CSS", "JavaScript"],
     repo: "https://github.com/amulyaambati6/Peer2Peer-Platform",
     live: "",
+    caseStudy: {
+      meta: [
+        { label: "Role", value: "Frontend development" },
+        { label: "Team", value: "Student team, split into frontend and backend" },
+        { label: "When", value: "Spring 2026" },
+        { label: "Stack", value: "HTML, CSS, JavaScript" },
+      ],
+      question: "How can students find the right peer mentor and get unstuck faster?",
+      overview: [
+        "The platform idea connects students with peer mentors for one-to-one or group sessions, plus a shared board for posting and answering doubts.",
+        "The frontend is a multi-page prototype that walks through the main student journeys with sample data. A teammate added an Express and MongoDB endpoint for booking sessions.",
+      ],
+      contribution: [
+        "Frontend development of the prototype's pages and interactions.",
+      ],
+      process: [
+        { step: "Sign in", text: "Login screen with a choice between the student and mentor role." },
+        { step: "Dashboard", text: "Upcoming sessions, mentor picks, points and tabs for sessions, doubts and learning path." },
+        { step: "Find", text: "Mentor search with subject, rating and sort filters." },
+        { step: "Book", text: "Session booking form: date, time, duration, type, subject and mentor." },
+        { step: "Ask", text: "Doubt board to browse, search and answer questions." },
+      ],
+      features: [
+        "Dark mode with a saved preference",
+        "Toast notifications and a messaging widget UI",
+        "Avatar menu, tabs and keyboard shortcuts",
+        "Consistent component styling across six pages",
+      ],
+      scopeNote:
+        "The project's planning document describes a larger roadmap (payments, recommendations, mobile). This case study covers only what is implemented in the repository.",
+      gallery: [
+        { src: peerLogin, alt: "Login page with student and mentor role selection" },
+        { src: peerMentors, alt: "Find Mentors page with filters and mentor cards" },
+        { src: peerBooking, alt: "Book a Session form" },
+        { src: peerDoubts, alt: "Doubt Board with questions and answer buttons" },
+      ],
+    },
   },
   {
+    slug: "password-checker",
     title: "Password Strength Checker",
+    short: "Password Strength Checker",
     tagline: "Browser-based security tool",
-    image: passwordShot,
+    image: passwordMedium,
     imageAlt:
       "Password Strength Checker with a strength bar, requirement checklist and estimated crack time",
-    description:
-      "Gives real-time feedback while a password is typed, scoring it and explaining how to make it stronger.",
-    highlights: [
-      "Checks length, upper and lower case, digits and special characters",
-      "Pattern detection: penalises letters-only, digits-only and repeated characters",
-      "Estimates brute-force crack time from character-set size and length",
-      "Strength meter, suggestions list and show/hide password toggle",
-    ],
-    role: "",
+    summary:
+      "Real-time feedback while a password is typed: a strength score, pattern checks, a brute-force crack-time estimate and suggestions to improve it.",
     tech: ["HTML", "CSS", "JavaScript"],
     repo: "https://github.com/amulyaambati6/Password-Strength-Checker",
     live: "",
+    caseStudy: {
+      meta: [
+        { label: "Type", value: "Client-side web tool" },
+        { label: "Stack", value: "HTML, CSS, JavaScript" },
+        { label: "Runs", value: "Entirely in the browser" },
+      ],
+      question: "Can a password checker explain why a password is weak, not just say it?",
+      overview: [
+        "As you type, the checker scores the password from 0 to 100, ticks off each requirement, estimates how long a brute-force attack would take, and lists concrete suggestions.",
+        "Nothing is sent anywhere: all checks run in the browser.",
+      ],
+      contribution: [],
+      process: [
+        { step: "Requirements", text: "Length ≥ 8, uppercase, lowercase, digit, special character: 20 points each." },
+        { step: "Length bonus", text: "+10 at 12 characters and another +10 at 16." },
+        { step: "Pattern penalties", text: "−10 for letters only, digits only, or a character repeated 3+ times." },
+        { step: "Crack time", text: "Character-set size raised to the length, at a billion guesses per second." },
+        { step: "Feedback", text: "Weak / Okay / Good / Perfect, plus targeted suggestions." },
+      ],
+      features: [
+        "Live requirement checklist",
+        "Colour-coded strength meter",
+        "Show / hide password toggle",
+        "Dismissible suggestions panel",
+      ],
+      demo: true,
+      gallery: [
+        { src: passwordWeak, alt: "Checker showing a weak password with suggestions" },
+        { src: passwordStrong, alt: "Checker showing a strong password with all requirements met" },
+      ],
+    },
   },
 ];
 
@@ -176,11 +282,10 @@ export const experience = [
 ];
 
 export const navLinks = [
+  { id: "work", label: "Work" },
   { id: "about", label: "About" },
   { id: "education", label: "Education" },
   { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
   { id: "experience", label: "Experience" },
-  { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" },
 ];
