@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.320d3ff9.css",
-    "main.js": "./static/js/main.f8af67a7.js",
+    "main.css": "./static/css/main.9492a302.css",
+    "main.js": "./static/js/main.f0f848c2.js",
     "static/media/covid-dashboard.jpg": "./static/media/covid-dashboard.b0f710e37e060f7683d8.jpg",
     "static/media/covid-findings.jpg": "./static/media/covid-findings.0e4eb9fd3250f236e31a.jpg",
     "static/media/peer-mentors.jpg": "./static/media/peer-mentors.3554b7fc3120add6f69f.jpg",
@@ -89,11 +89,11 @@
     "static/media/inter-vietnamese-600-normal.woff2": "./static/media/inter-vietnamese-600-normal.6984cf5e8583fac83be3.woff2",
     "static/media/inter-vietnamese-400-normal.woff2": "./static/media/inter-vietnamese-400-normal.44c9df135eec470b0ab6.woff2",
     "index.html": "./index.html",
-    "main.320d3ff9.css.map": "./static/css/main.320d3ff9.css.map",
-    "main.f8af67a7.js.map": "./static/js/main.f8af67a7.js.map"
+    "main.9492a302.css.map": "./static/css/main.9492a302.css.map",
+    "main.f0f848c2.js.map": "./static/js/main.f0f848c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.320d3ff9.css",
-    "static/js/main.f8af67a7.js"
+    "static/css/main.9492a302.css",
+    "static/js/main.f0f848c2.js"
   ]
 }
