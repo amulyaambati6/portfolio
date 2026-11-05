@@ -13,11 +13,13 @@ function Education() {
             </div>
             <h3 className="card__title">{e.institution}</h3>
             <p className="card__sub">{e.programme}</p>
-            <ul className="bullets">
-              {e.details.map((d) => (
-                <li key={d}>{d}</li>
-              ))}
-            </ul>
+            {e.details.length > 0 && (
+              <ul className="bullets">
+                {e.details.map((d) => (
+                  <li key={d}>{d}</li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
       </ol>

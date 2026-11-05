@@ -33,8 +33,7 @@ export const profile = {
 
   email: "amulyaambati6@gmail.com",
   github: "https://github.com/amulyaambati6",
-  // TODO: add your LinkedIn profile URL, e.g. "https://www.linkedin.com/in/your-handle/"
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/amulya-ambati/",
   // Put your CV in /public with this file name. Until it exists, the site
   // shows "Request my CV by email" instead of a broken download.
   resumeFile: "Amulya_Ambati_CV.pdf",
@@ -75,7 +74,7 @@ export const education = [
     institution: "Centrale Méditerranée",
     place: "Nice, France",
     programme: "Digital Tech Year (Bac+4 level)",
-    period: "2026 – 2027",
+    period: "Sep 2026 – present",
     details: [
       "Project-based year focused on digital technology, data and teamwork.",
       "Internship agreement (convention de stage) provided by the school.",
@@ -85,9 +84,18 @@ export const education = [
   {
     institution: "Mahindra University",
     place: "Hyderabad, India",
-    programme: "Bachelor's degree, Computer Science Engineering",
-    period: "Expected 2027",
-    details: ["Relevant coursework: Deep Neural Networks."],
+    programme: "B.E. Computer Science Engineering · CGPA 7.49/10",
+    period: "Aug 2023 – expected 2027",
+    details: [
+      "Relevant coursework: Data Structures & Algorithms, Database Management Systems, Object-Oriented Programming, Optimization Techniques for AI, Deep Neural Networks, Quantum Computing & Quantum Machine Learning.",
+    ],
+  },
+  {
+    institution: "Kendriya Vidyalaya, NTPC Ramagundam",
+    place: "Telangana, India",
+    programme: "CBSE Class XII · 90.2%",
+    period: "2022 – 2023",
+    details: [],
   },
 ];
 
@@ -96,7 +104,10 @@ export const skills = [
   { group: "Data & Analytics", items: ["Pandas", "Plotly", "Streamlit", "SciPy", "MySQL"] },
   { group: "Web Development", items: ["HTML", "CSS", "JavaScript", "React"] },
   { group: "Tools", items: ["Git", "GitHub", "VS Code"] },
-  { group: "Digital & Design", items: ["Canva", "Meta Ads Manager", "Content creation"] },
+  {
+    group: "Digital Marketing & Design",
+    items: ["Meta Ads Manager", "Content planning", "Social media campaigns", "Canva"],
+  },
 ];
 
 export const projects = [
@@ -177,7 +188,7 @@ export const projects = [
       meta: [
         { label: "Role", value: "Frontend development" },
         { label: "Team", value: "Student team, split into frontend and backend" },
-        { label: "When", value: "Spring 2026" },
+        { label: "When", value: "Jan – June 2026" },
         { label: "Stack", value: "HTML, CSS, JavaScript" },
       ],
       question: "How can students find the right peer mentor and get unstuck faster?",
@@ -258,25 +269,53 @@ export const projects = [
   },
 ];
 
-// Only roles you can stand behind. Add internships, societies, volunteering
-// or events here in the same format; the section updates automatically.
+// Grouped experience. Only roles you can stand behind; add new ones in the
+// same format and the section updates automatically. "points" can be empty.
 export const experience = [
   {
-    title: "Visualisation, Design, Testing & Integration",
-    org: "COVID-19 dashboard team (4 members), Centrale Méditerranée",
-    period: "Oct 2026",
-    points: [
-      "Owned the dashboard's visual design and chart styling.",
-      "Integrated team members' data, analysis and page work into one app and tested it.",
-      "Added the bonus MySQL database layer.",
+    group: "Work experience",
+    items: [
+      {
+        title: "Marketing Intern (part-time)",
+        org: "Joy International School · India",
+        period: "Dec 2025 – Feb 2026",
+        points: [
+          "Supported brand development and outreach.",
+          "Worked with Meta Ads Manager campaigns and reviewed performance insights to inform marketing decisions.",
+        ],
+      },
+      {
+        title: "Digital Marketing Intern",
+        org: "DigiWok Media · India",
+        period: "Jun – Jul 2025",
+        points: [
+          "Wrote blog content and contributed to social media campaigns.",
+          "Supported content planning, ideation and execution.",
+        ],
+      },
     ],
   },
   {
-    title: "Frontend Developer",
-    org: "Peer-to-peer tutoring platform team",
-    period: "2026",
-    points: [
-      "Contributed to the multi-page frontend prototype within a team that split frontend and backend work.",
+    group: "Leadership & activities",
+    items: [
+      {
+        title: "Social Media Head",
+        org: "7 Screens Media Club",
+        period: "2025 – present",
+        points: [],
+      },
+      {
+        title: "Social Media Head & Organising Committee Member",
+        org: "French Club · Etincelle Fest",
+        period: "2024 – 2025",
+        points: [],
+      },
+      {
+        title: "Marketing & Social Media Coordinator",
+        org: "Erudite Literature Club · Quill Fest",
+        period: "2024 – 2025",
+        points: [],
+      },
     ],
   },
 ];
