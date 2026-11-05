@@ -4,7 +4,7 @@ import { experience } from "../data/profile";
 function Experience() {
   if (!experience.length) return null;
   return (
-    <Section id="experience" eyebrow="Experience & leadership" title="Roles and responsibilities">
+    <Section id="experience" number="05" eyebrow="Experience & leadership" title="Roles and responsibilities" tone="tint">
       <ol className="timeline timeline--line">
         {experience.map((x) => (
           <li key={x.title + x.org} className="timeline__item">
